@@ -27,7 +27,7 @@ import { Role } from 'src/users/models/roles.model';
               port: +configService.get('DATABASE_PORT'),
               user: configService.get('DATABASE_USER'),
               password: configService.get('DATABASE_PASSWORD'),
-              database: configService.get('DATABASE_USER'),
+              database: configService.get('DATABASE_NAME'),
             },
             ...knexSnakeCaseMappers(),
           },

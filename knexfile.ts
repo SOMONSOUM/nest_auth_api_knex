@@ -5,13 +5,13 @@ import 'dotenv/config';
 // Update with your config settings.
 const options: { [key: string]: Knex.Config } = {
   development: {
-    client: 'pg',
+    client: 'mysql2',
     connection: {
       host: process.env.DATABASE_URL,
       port: +process.env.DATABASE_PORT,
       user: process.env.DATABASE_USER,
       password: process.env.DATABASE_PASSWORD,
-      database: process.env.DATABASE_USER,
+      database: process.env.DATABASE_NAME,
     },
     migrations: {
       directory: './src/database/migrations',
